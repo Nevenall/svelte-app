@@ -1,7 +1,10 @@
 import svelte from 'rollup-plugin-svelte';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
+import {
+	terser
+} from 'rollup-plugin-terser';
+import browsersync from 'rollup-plugin-browsersync'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -35,7 +38,11 @@ export default {
 		// https://github.com/rollup/rollup-plugin-commonjs
 		resolve(),
 		commonjs(),
-
+		browsersync({
+			server: 'public',
+			files: ['public/**'],
+			open: false
+		}),
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
 		production && terser()
