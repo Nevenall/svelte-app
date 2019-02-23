@@ -8,7 +8,6 @@
       "request": "attach",
       "name": "Attach to Chrome",
       "port": 9222,
-      "webRoot": "${workspaceFolder}/public",
-      "preLaunchTask": "start"
+      "webRoot": "${workspaceFolder}/public"
    }]
 }

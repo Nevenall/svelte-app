@@ -5,6 +5,9 @@ import {
 	terser
 } from 'rollup-plugin-terser';
 import browsersync from 'rollup-plugin-browsersync'
+import {
+	sass
+} from 'svelte-preprocess-sass';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -21,11 +24,15 @@ export default {
 			// opt in to v3 behaviour today
 			skipIntroByDefault: true,
 			nestedTransitions: true,
+			customElement: true,
 
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into
 			// a separate file — better for performance
+			preprocess: {
+				style: sass()
+			},
 			css: css => {
 				css.write('public/bundle.css');
 			}
