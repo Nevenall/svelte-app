@@ -1,38 +1,33 @@
-<div class="wrapper">
-	<app-bar></app-bar>
+<app-bar></app-bar>
+<nav-drawer></nav-drawer>
 
+<h1>Hello {name}!</h1>
 
-	<h1>Hello {name}!</h1>
+<p>some more content</p>
 
-	<p>some more content</p>
-
-	<aside>
-		<h2>Some things about bob</h2>
-	</aside>
-</div>
+<aside>
+   <h2>Some things about bob</h2>
+</aside>
 
 
 <style type="text/sass">
-	h1 {
+   h1 {
 	  color: blanchedalmond;
 	}
 
-	.wrapper {
-		height: 100vh;
-	  background: darkgray;
-	}
+	
 </style>
 
 <script>
-	import appbar from "./components/appbar.html";
-	import drawer from "./components/drawer.html";
+   import appbar from './components/app-bar.html'
+   import drawer from './components/nav-drawer.html'
 
-	export default {
-	  tag: "svelte-app",
-	  data() {
-	    return {
-	      name: "My Man"
-	    };
-	  }
-	};
+   export default {
+      tag: 'svelte-app',
+      data() {
+         return {
+            name: "My Man"
+         }
+      }
+   }
 </script>
