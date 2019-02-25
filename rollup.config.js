@@ -24,7 +24,8 @@ export default {
          // opt in to v3 behaviour today
          skipIntroByDefault: true,
          nestedTransitions: true,
-         customElement: true,
+         // note - not going to use custom elements yet because it doesn't work with transitions
+         // customElement: true,
 
          // enable run-time checks when not in production
          dev: !production,

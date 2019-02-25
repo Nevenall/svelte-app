@@ -17,5 +17,8 @@
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "start": "browser-sync start --no-open --server 'public' --files 'public'"
+  },
+  "dependencies": {
+    "svelte-transitions": "^1.2.0"
   }
 }
