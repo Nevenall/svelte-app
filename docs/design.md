@@ -46,4 +46,8 @@ One thing that the existing vue components have is effects, like the ripple effe
 AND this is where we start reading hydejack to learn how he does animations and such. 
 
 
+so, how do components and css variabls interact? each component can import them
 
+## Store
+
+What if we used gundb instead of store? It does the same stuff? Each instance of our app is like one app? Especially good if we occasionally publish page updates. would be like a 
