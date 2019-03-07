@@ -8,6 +8,7 @@ import browsersync from 'rollup-plugin-browsersync'
 import {
    sass
 } from 'svelte-preprocess-sass';
+import scss from 'rollup-plugin-scss'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -39,6 +40,7 @@ export default {
          }
       }),
 
+      scss(),
       // If you have external dependencies installed from
       // npm, you'll most likely need these plugins. In
       // some cases you'll need additional configuration —

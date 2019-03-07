@@ -1,4 +1,7 @@
-@import './remedy.css'
+@import './remedy.css';
+@import './variables.css';
+
+
 
 html,
 body {

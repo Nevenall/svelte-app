@@ -51,3 +51,29 @@ so, how do components and css variabls interact? each component can import them
 ## Store
 
 What if we used gundb instead of store? It does the same stuff? Each instance of our app is like one app? Especially good if we occasionally publish page updates. would be like a 
+
+
+## Layout of proj
+
+especially where shall we place css? 
+top level, or where approp? 
+I would also love to put the global stuff in src and copy it where appropriate
+
+## Ongoing work
+
+https://github.com/AgronKabashi/rollup-plugin-conditional
+explains how to only run the browsersync plugin in dev
+
+also, need to process sass and css files, 
+kind of need a css entry point
+
+
+https://github.com/meuter/rollup-plugin-copy
+
+can use that to copy static files
+
+https://code.lengstorf.com/learn-rollup-css/
+
+maybe postcss? 
+
+also, whatever css processor we use will have to interact with svelte as well
