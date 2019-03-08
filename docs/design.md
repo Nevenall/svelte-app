@@ -77,3 +77,22 @@ https://code.lengstorf.com/learn-rollup-css/
 maybe postcss? 
 
 also, whatever css processor we use will have to interact with svelte as well
+
+
+So, postcss is nice, but the language support is not quite there. There is an extension though. 
+
+looks like there aren't that many plugins which will process @imports in css. or sass for that matter?
+I feel like sass ought to figure that out, but maybe not. Maybe that is a sass config to bundle? 
+
+Also, the component css gets lost. 
+
+We might ahve to write the global css to a global css file, and the compoenent css to the bundle. 
+
+nothing wrong with that. it's very nice. 
+
+sass compiled css, bundled into one global.css output file, and components are bundled into bundle.css
+
+that seems totally reasonable. I hope sass can do bundling. 
+
+Also, https://www.npmjs.com/package/rollup-plugin-rebase
+this looks like a cool plugin. 

@@ -1,16 +1,20 @@
-import svelte from 'rollup-plugin-svelte';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
+import svelte from 'rollup-plugin-svelte'
+import resolve from 'rollup-plugin-node-resolve'
+import commonjs from 'rollup-plugin-commonjs'
 import {
    terser
-} from 'rollup-plugin-terser';
+} from 'rollup-plugin-terser'
+
 import browsersync from 'rollup-plugin-browsersync'
+
 import {
    sass
-} from 'svelte-preprocess-sass';
+} from 'svelte-preprocess-sass'
 import scss from 'rollup-plugin-scss'
+import sassP from 'rollup-plugin-sass'
+import cssbundle from 'rollup-plugin-css-bundle'
 
-const production = !process.env.ROLLUP_WATCH;
+const production = !process.env.ROLLUP_WATCH
 
 export default {
    input: 'src/main.js',
@@ -36,11 +40,12 @@ export default {
             style: sass()
          },
          css: css => {
-            css.write('public/bundle.css');
+            css.write('public/bundle.css')
          }
       }),
 
-      scss(),
+      sassP(),
+      cssbundle(),
       // If you have external dependencies installed from
       // npm, you'll most likely need these plugins. In
       // some cases you'll need additional configuration —
@@ -48,7 +53,7 @@ export default {
       // https://github.com/rollup/rollup-plugin-commonjs
       resolve(),
       commonjs(),
-      browsersync({
+      !production && browsersync({
          server: 'public',
          files: ['public/**'],
          open: false
@@ -57,4 +62,4 @@ export default {
       // instead of npm run dev), minify
       production && terser()
    ]
-};
+}
