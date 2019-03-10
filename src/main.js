@@ -1,9 +1,5 @@
 import App from './App.html'
-
-import vars from './styles/variables.css'
-import rem from './styles/remedy.css'
-import global from './styles/global.css'
-
+import style from './styles/global.scss'
 
 const app = new App({
    target: document.body

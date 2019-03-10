@@ -96,3 +96,18 @@ that seems totally reasonable. I hope sass can do bundling.
 
 Also, https://www.npmjs.com/package/rollup-plugin-rebase
 this looks like a cool plugin. 
+
+
+## Style Bundling
+
+Looks like I can simply ref whatever sass sheets I need in the style node of the app component and it can get imported and reduced to only needed styles that way. 
+no need for a separate style bundling, unless we want some kind of global style for the app, and something separate for the book. I think we can reduce the scope of the styles for something like a page presenter element. though, we also need global color vars to go down to the page component. 
+
+So, app references global.scss and the various components can reference whatever, We can split things up however want. 
+
+
+https://github.com/sormy/rollup-plugin-smart-asset#readme
+
+Seems to have some trouble with font faces though 
+
+rollup scss doesn't so we may have to define some things in global to keep svelte from striping them. Will def have to do that. 

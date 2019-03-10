@@ -1,8 +1,9 @@
-@import './remedy.css';
-@import './variables.css';
+@import './remedy.scss';
+@import './variables.scss';
+@import './typography.scss';
 
 
-
+// global styles
 html,
 body {
    position: relative;

@@ -7,12 +7,8 @@ import {
 
 import browsersync from 'rollup-plugin-browsersync'
 
-import {
-   sass
-} from 'svelte-preprocess-sass'
+import sass from 'svelte-preprocess'
 import scss from 'rollup-plugin-scss'
-import sassP from 'rollup-plugin-sass'
-import cssbundle from 'rollup-plugin-css-bundle'
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -36,16 +32,28 @@ export default {
          dev: !production,
          // we'll extract any component CSS out into
          // a separate file — better for performance
-         preprocess: {
-            style: sass()
-         },
+         // preprocess:    {
+         //    style: sass({
+         //       transformers: {
+         //          scss: true
+         //       }
+         //    })
+         // },
+
+         preprocess: sass({
+            transformers: {
+               scss: true
+            }
+         }),
+
          css: css => {
             css.write('public/bundle.css')
          }
       }),
 
-      sassP(),
-      cssbundle(),
+      scss({
+         output: 'public/global.css'
+      }),
       // If you have external dependencies installed from
       // npm, you'll most likely need these plugins. In
       // some cases you'll need additional configuration —

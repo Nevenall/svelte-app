@@ -1,47 +1,51 @@
 <AppBar>
-   <h1>Hello {name}!</h1>
+	<h1>Hello {name}!</h1>
 </AppBar>
 
 {#if visible}
 <div transition:fly="{y: 200, duration: 1000}">
-   <Drawer></Drawer>
+	<Drawer></Drawer>
 </div>
 {/if}
 
 <label><input type=checkbox bind:checked=visible />visible</label>
 
 <aside>
-   <h2>Some things about bob</h2>
+	<h2>Some things about bob</h2>
 </aside>
 
-<style type="text/sass">
-   @import 'styles/variables';
+<style lang="scss">
+   @import "fonts/fonts";
+   @import "styles/global";
+
    h1 {
-    color: blanchedalmond;
-  }
+     color: blanchedalmond;
+   }
+
+   h2 {
+     font-family: "AtomicWedgie";
+   }
 </style>
 
 <script>
-   import AppBar from "./components/app-bar.html"
-   import Drawer from "./components/nav-drawer.html"
+  import AppBar from "./components/app-bar.html";
+  import Drawer from "./components/nav-drawer.html";
 
-   import {
+  import { fly } from "svelte-transitions";
+
+  export default {
+    tag: "svelte-app",
+    components: {
+      AppBar,
+      Drawer
+    },
+    transitions: {
       fly
-   } from "svelte-transitions"
-
-   export default {
-      tag: "svelte-app",
-      components: {
-         AppBar,
-         Drawer
-      },
-      transitions: {
-         fly
-      },
-      data() {
-         return {
-            name: "My Man"
-         }
-      }
-   }
+    },
+    data() {
+      return {
+        name: "My Man"
+      };
+    }
+  };
 </script>
