@@ -29,3 +29,11 @@ Can't tell if it's the keyboard or if it's me, or if it's the fact that I have m
 Anyway....
 
 I guess sapper does do well in critical path styles and such. But, bookshelf is not a very big site. If it's big, it will be because of fonts and images. 
+
+
+### Todo
+
+got the parcel setup working, there is a little bug around the svelte plugin which maybe will be fixed soonish. https://github.com/DeMoorJasper/parcel-plugin-svelte/issues/44
+
+Oh, and we need to exclude the manifest from parcel. 
+
