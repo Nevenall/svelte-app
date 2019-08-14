@@ -1,21 +1,19 @@
 {
   "name": "svelte-app",
-  "description": "TODO",
+  "description": "svelte and parcel from ground up",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build --legacy"
+    "dev": "parcel src/index.html -p 3000",
+    "build": "parcel build --no-source-maps src/index.html"
   },
-  "dependencies": {},
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "main": "src/index.html",
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
     "node-sass": "^4.12.0",
-    "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.3",
-    "svelte": "^3.0.0"
+    "parcel-plugin-svelte": "^4.0.1",
+    "svelte": "^3.8.0"
   }
 }
