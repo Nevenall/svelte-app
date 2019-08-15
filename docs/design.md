@@ -44,3 +44,13 @@ because of sass importing
 
 I'd like to see the svelte compiler output
 
+### 8/15
+
+So, parcel will package scss. I could just include it in index.html and it will get taken care of, 
+But then we miss out on tree pruning. 
+not that I plan to have that much of that, but...
+I wonder if parcel can do that itself? 
+prob not
+
+So, global sass bundling works, 
+but, still need to configure svelte to allow scss style sections.

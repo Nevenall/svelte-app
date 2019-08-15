@@ -4,8 +4,7 @@
 </script>
 
 <style lang="scss">
-  @import "./styles/global.scss";
-
+ 
 </style>
 
 <h1>Hello {name}!</h1>
