@@ -3,11 +3,13 @@
   export let name;
 </script>
 
-<style>
+<style lang="scss">
+  @import "./styles/global.scss";
+
   h1 {
-    color: purple;
+    font-family: "AtomicWedgie";
   }
 </style>
 
 <h1>Hello {name}!</h1>
-<Nav/>
+<Nav />
