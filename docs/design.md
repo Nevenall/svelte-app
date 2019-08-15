@@ -35,5 +35,12 @@ I guess sapper does do well in critical path styles and such. But, bookshelf is 
 
 got the parcel setup working, there is a little bug around the svelte plugin which maybe will be fixed soonish. https://github.com/DeMoorJasper/parcel-plugin-svelte/issues/44
 
-Oh, and we need to exclude the manifest from parcel. 
+web manifest fixed
+
+
+fonts are working,
+
+because of sass importing
+
+I'd like to see the svelte compiler output
 

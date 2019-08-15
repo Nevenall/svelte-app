@@ -3,7 +3,7 @@
   "description": "svelte and parcel from ground up",
   "version": "0.0.1",
   "scripts": {
-    "dev": "parcel src/index.html -p 3000",
+    "dev": "parcel src/index.html -p 3000 --log-level 4",
     "build": "parcel build --no-source-maps src/index.html"
   },
   "browserslist": [
@@ -15,6 +15,7 @@
   "devDependencies": {
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-clean-dist": "0.0.6",
     "parcel-plugin-svelte": "^4.0.1",
     "svelte": "^3.8.0",
     "svelte-preprocess-sass": "^0.2.0"

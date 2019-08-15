@@ -6,9 +6,6 @@
 <style lang="scss">
   @import "./styles/global.scss";
 
-  h1 {
-    font-family: "AtomicWedgie";
-  }
 </style>
 
 <h1>Hello {name}!</h1>
