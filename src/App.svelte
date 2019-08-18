@@ -3,9 +3,14 @@
   export let name;
 </script>
 
-<style lang="scss">
- 
+<style>
+  span {
+    color: red;
+  }
 </style>
 
-<h1>Hello {name}!</h1>
+<h1>
+  Hello
+  <span class="red">{name}!</span>
+</h1>
 <Nav />

@@ -1,18 +1,21 @@
 <script>
-	export let segment;
+  import book from "../pages/book";
+  console.log(book);
+  export let segment;
 </script>
 
 <style>
-	
+
 </style>
 
 <nav>
-	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
+  <ul>
+    {#each book.pages as page}
+      <li>
+        <a rel="prefetch" href="{page.path}">{page.data.name}</a>
+      </li>
+    {/each}
 
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
-	</ul>
+   
+  </ul>
 </nav>

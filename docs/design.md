@@ -54,3 +54,5 @@ prob not
 
 So, global sass bundling works, 
 but, still need to configure svelte to allow scss style sections.
+then again, do we need svelte compoents to use sass? we can proably get away with plain css. 
+
