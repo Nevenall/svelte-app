@@ -56,3 +56,11 @@ So, global sass bundling works,
 but, still need to configure svelte to allow scss style sections.
 then again, do we need svelte compoents to use sass? we can proably get away with plain css. 
 
+### 8/19
+
+start with a nav component that does one level of section. we can improve later. 
+
+so lets read about pwa and service worker. 
+we can background cache the pages because off line is my goal. 
+
+
