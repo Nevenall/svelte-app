@@ -63,4 +63,32 @@ start with a nav component that does one level of section. we can improve later.
 so lets read about pwa and service worker. 
 we can background cache the pages because off line is my goal. 
 
+offline reading
+fast
+how large is an html book? depends on if they are pictures. 
+
+## Service Worker
+
+1. loads app shell, initial readme/intro page html content, all fonts, and styles.
+2. fetch the rest of the page content into the cache in the background
+3. if a specific page is requested, try checking the server for a more upto date version and fetch it if...otherwise serve from cache. 
+
+occassionally check for an app shell update, becuase that would include new pages or removed pages and that sort of thing. 
+
+pretty straight forward.
+
+## Nav
+
+can the functionality of the nav drawer be entirely contained in the component? 
+a button that causes a fly in
+
+the smaller the screen the larger the percentage the menu can take up.
+min-width? 
+
+
+## App bar 
+
+want it to stick to the top and relect theme color. be nice if we can hide it as we scroll down. Show it if we scroll up. but has to be smooth and consistent. 
+
+it contains the nav drawer button. maybe a breadcrumb too. especially if we get to parsing individual markdown sections.
 
