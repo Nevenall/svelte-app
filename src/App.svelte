@@ -9,8 +9,8 @@
   }
 </style>
 
+<Nav />
 <h1>
   Hello
-  <span class="red">{name}!</span>
+  <span>{name}!</span>
 </h1>
-<Nav />
