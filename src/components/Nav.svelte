@@ -1,60 +1,38 @@
 <script>
-	export let segment;
+  import book from "../pages/book";
+  console.log(book);
+  export let segment;
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	.selected {
-		position: relative;
-		display: inline-block;
-	}
-
-	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
 </style>
 
 <nav>
-	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
-	</ul>
+  <ul>
+    {#each book.sections as section}
+      <li>
+        {section.name}
+        {#each section.pages as spage}
+          <li>
+            <a href={spage.path}>{spage.name}</a>
+          </li>
+        {/each}
+      </li>
+    {/each}
+    {#each book.pages as page}
+      <li>
+        <a href={page.path}>{page.data.name}</a>
+      </li>
+    {/each}
+  </ul>
 </nav>
+<!--
+   We have some nav
+   need to be able to actually get a display the page content, it's a file, soo maybe take a look at how the sapper router works. We can import the pages to get them into the build. 
+   we also need to do the nested nav
+   the service-worker needs to be, and to deal with 
+   the nav can raise an event and a page compoent can get that a load the page. 
+   Though, we kinda want to have all the pages present. 
+   
+ -->

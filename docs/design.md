@@ -1,113 +1,94 @@
-# Design
-
-This template is the start of a hand-coded replacement for BookShelf. 
-
-Let's learn more about html and css and see what we can accomplish without a big framework like vue and material design? 
-
-Without worrying too much about compatibility. 
-
-## Svelte components vs. Web components
-
-It's possible to compile to web components, which doens't work with svelte-transactions, but I presume we could do our own css based animations? 
-
-The web compoments are more isolated, and is an upcoming browser tech. However, I wonder how the page content will be handled? beause, as I understand it each component gets hidden in the markup. So, we'd have to fetch an initial page that contained all of the book markup bytes. Not a huge deal, but also, maybe not?
-
-Also, every page component would have to have an element-name and I'm not sure we can dynamically switch to them all that easily. Like we would for a page. 
-
-best to stick with vanilla svelte for now. I think. 
-
-## App Layout
-
-I like the basic app layout I have already. 
-AppBar with a breadcrumb, sliding nav drawer, and text that waterfall scrolls behind the appbar. I'd like too if we could gracefully hide the appbar with scrolling for a full screen effect, but that never seems to work that well. 
-
-## Features
-
-Also, touch and keyboard nav would be cool
-
-But first new feature should probably be a really good search experience. 
-
-hard to find a consistant keyboard shortcut, but we can at least have a nice sliding panel that keeps the last search results and provides context for each appearance. 
-and is fast and supports at least some kind of * patterning. 
-
-## Styling
-
-we have a pretty good typography style sheet already, we can use that, and we have the ability to bundle more of the book stuff, fonts and stylesheets, into the pages dir. Start working towards a single instance app some day. 
-
-**use css variables over sass variables. They are dynamic.**
-
-Establish our screen breakpoints solidly upfront.
-
-The existing asides are ok, but it might be good to make the basic ones simpler and let the book control them more? I'm thinking of the aside lists in the blades book. I like them. 
-
-### Effects
-
-One thing that the existing vue components have is effects, like the ripple effect when you click something. At least I think they do... It would be cool to figure out how to do that. 
-AND this is where we start reading hydejack to learn how he does animations and such. 
+# Svelte app
 
 
-so, how do components and css variabls interact? each component can import them
+I have separated this from sapper-app so that I can start from just Svelte for bookshelf
 
-## Store
+sapper is cool, but more than I need. 
 
-What if we used gundb instead of store? It does the same stuff? Each instance of our app is like one app? Especially good if we occasionally publish page updates. would be like a 
-
-
-## Layout of proj
-
-especially where shall we place css? 
-top level, or where approp? 
-I would also love to put the global stuff in src and copy it where appropriate
-
-## Ongoing work
-
-https://github.com/AgronKabashi/rollup-plugin-conditional
-explains how to only run the browsersync plugin in dev
-
-also, need to process sass and css files, 
-kind of need a css entry point
+Using Parcel for speed and it now has good tree shaking support. 
+Also, I prefer the parcel approach to configuration where I can configure each front-end piece individually. Makes it easy to learn each and to swap them. 
 
 
-https://github.com/meuter/rollup-plugin-copy
 
-can use that to copy static files
+## Front End pipeline
 
-https://code.lengstorf.com/learn-rollup-css/
+Parcel comes with a dev server with hmr so, thats fine. My goal is that this will be compiled to a static PWA. 
+Need to learn about how to write a service-worker.js
 
-maybe postcss? 
+Babel is a given I think, we want to have the ability to use modern js. 
 
-also, whatever css processor we use will have to interact with svelte as well
+Sass also is one of my favorites if only for nested rules.
 
+PostCSS maybe? autoprefixer would be good. 
 
-So, postcss is nice, but the language support is not quite there. There is an extension though. 
+Svelte can remove dead css rules. 
 
-looks like there aren't that many plugins which will process @imports in css. or sass for that matter?
-I feel like sass ought to figure that out, but maybe not. Maybe that is a sass config to bundle? 
+Man what is with my typing today? 
 
-Also, the component css gets lost. 
+Can't tell if it's the keyboard or if it's me, or if it's the fact that I have my screen size set low.
+Anyway....
 
-We might ahve to write the global css to a global css file, and the compoenent css to the bundle. 
-
-nothing wrong with that. it's very nice. 
-
-sass compiled css, bundled into one global.css output file, and components are bundled into bundle.css
-
-that seems totally reasonable. I hope sass can do bundling. 
-
-Also, https://www.npmjs.com/package/rollup-plugin-rebase
-this looks like a cool plugin. 
+I guess sapper does do well in critical path styles and such. But, bookshelf is not a very big site. If it's big, it will be because of fonts and images. 
 
 
-## Style Bundling
+### Todo
 
-Looks like I can simply ref whatever sass sheets I need in the style node of the app component and it can get imported and reduced to only needed styles that way. 
-no need for a separate style bundling, unless we want some kind of global style for the app, and something separate for the book. I think we can reduce the scope of the styles for something like a page presenter element. though, we also need global color vars to go down to the page component. 
+got the parcel setup working, there is a little bug around the svelte plugin which maybe will be fixed soonish. https://github.com/DeMoorJasper/parcel-plugin-svelte/issues/44
 
-So, app references global.scss and the various components can reference whatever, We can split things up however want. 
+web manifest fixed
 
 
-https://github.com/sormy/rollup-plugin-smart-asset#readme
+fonts are working,
 
-Seems to have some trouble with font faces though 
+because of sass importing
 
-rollup scss doesn't so we may have to define some things in global to keep svelte from striping them. Will def have to do that. 
+I'd like to see the svelte compiler output
+
+### 8/15
+
+So, parcel will package scss. I could just include it in index.html and it will get taken care of, 
+But then we miss out on tree pruning. 
+not that I plan to have that much of that, but...
+I wonder if parcel can do that itself? 
+prob not
+
+So, global sass bundling works, 
+but, still need to configure svelte to allow scss style sections.
+then again, do we need svelte compoents to use sass? we can proably get away with plain css. 
+
+### 8/19
+
+start with a nav component that does one level of section. we can improve later. 
+
+so lets read about pwa and service worker. 
+we can background cache the pages because off line is my goal. 
+
+offline reading
+fast
+how large is an html book? depends on if they are pictures. 
+
+## Service Worker
+
+1. loads app shell, initial readme/intro page html content, all fonts, and styles.
+2. fetch the rest of the page content into the cache in the background
+3. if a specific page is requested, try checking the server for a more upto date version and fetch it if...otherwise serve from cache. 
+
+occassionally check for an app shell update, becuase that would include new pages or removed pages and that sort of thing. 
+
+pretty straight forward.
+
+## Nav
+
+can the functionality of the nav drawer be entirely contained in the component? 
+a button that causes a fly in
+
+the smaller the screen the larger the percentage the menu can take up.
+min-width? 
+
+
+## App bar 
+
+want it to stick to the top and relect theme color. be nice if we can hide it as we scroll down. Show it if we scroll up. but has to be smooth and consistent. 
+
+it contains the nav drawer button. maybe a breadcrumb too. especially if we get to parsing individual markdown sections.
+

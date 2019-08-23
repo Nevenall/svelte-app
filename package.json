@@ -1,36 +1,22 @@
 {
   "name": "svelte-app",
-  "description": "TODO",
+  "description": "svelte and parcel from ground up",
   "version": "0.0.1",
   "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
-    "start": "node __sapper__/build",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "start": "parcel src/index.html -p 3000 --log-level 4",
+    "build": "parcel build --no-source-maps src/index.html"
   },
-  "dependencies": {
-    "compression": "^1.7.1",
-    "polka": "^0.5.0",
-    "sirv": "^0.4.0"
-  },
+  "browserslist": [
+    "last 1 chrome versions",
+    "last 1 firefox versions",
+    "not dead"
+  ],
+  "main": "src/index.html",
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "sapper": "^0.27.0",
-    "svelte": "^3.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
-    "rollup": "^1.0.0",
-    "rollup-plugin-babel": "^4.0.2",
-    "rollup-plugin-commonjs": "^9.1.6",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-svelte": "^5.0.1",
-    "rollup-plugin-terser": "^4.0.4"
+    "node-sass": "^4.12.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "parcel-plugin-svelte": "^4.0.1",
+    "svelte": "^3.8.0"
   }
 }

@@ -1,4 +1,4 @@
-/* remedy.css — This project is under construction. It's not ready for release yet. As of Feb 11, 2019. */
+/* This project is under construction. It's not ready for release yet. As of Feb 11, 2019. */
 
 *,
 ::before,
@@ -14,6 +14,7 @@
    * {
       animation-duration: 0.001s !important;
       transition-duration: 0.001s !important;
+      animation-iteration-count: 1 !important;
    }
 }
 
@@ -22,49 +23,49 @@ body {
    /* Remove the tiny space around the edge of the page */
 }
 
-/* Switch to using rem units for typography. Fix line-height on headlines. */
-h1 {
-   font-size: 2rem;
-   /* Make all H1 large, remove nested-shrinking sizes. */
-   margin: 0.67em 0;
-}
+// /* Switch to using rem units for typography. Fix line-height on headlines. */
+// h1 {
+//    font-size: 2rem;
+//    /* Make all of the H1 tags large, remove nested-shrinking sizes. */
+//    margin: 0.67em 0;
+// }
 
-h2 {
-   font-size: 1.5rem;
-}
+// h2 {
+//    font-size: 1.5rem;
+// }
 
-h3 {
-   font-size: 1.17rem;
-}
+// h3 {
+//    font-size: 1.17rem;
+// }
 
-h4 {
-   font-size: 1.00rem;
-}
+// h4 {
+//    font-size: 1.00rem;
+// }
 
-h5 {
-   font-size: 0.83rem;
-}
+// h5 {
+//    font-size: 0.83rem;
+// }
 
-h6 {
-   font-size: 0.67rem;
-}
+// h6 {
+//    font-size: 0.67rem;
+// }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-   line-height: 1;
-}
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//    line-height: 1;
+// }
 
-/* Improve readability */
-p,
-ul,
-ol,
-dl,
-address {
-   line-height: 1.5;
-}
+// /* Improve readability */
+// p,
+// ul,
+// ol,
+// dl,
+// address {
+//    line-height: 1.5;
+// }
 
 
 pre {

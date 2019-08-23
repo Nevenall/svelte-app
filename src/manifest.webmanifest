@@ -1,0 +1,20 @@
+{
+  "theme_color": "#002171",
+  "background_color": "#303030",
+  "name": "BookShelf Svelte",
+  "short_name": "bookshelf-svelte",
+  "display": "fullscreen",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "./assets/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

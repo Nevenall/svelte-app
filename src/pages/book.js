@@ -1,126 +1,152 @@
 module.exports = {
-   "title": "Blades in the Dark",
-   "root": "C:\\src\\blades-in-the-dark\\html",
+   "title": "Ghosting the Edge",
+   "root": "C:\\src\\ghosting-the-edge\\html",
    "allPages": [
       {
-         "name": "The Basics",
-         "path": "C:\\src\\blades-in-the-dark\\html\\01-the-basics.html",
+         "path": "01 Ghosting the Edge.html",
          "order": 1,
          "data": {
-            "title": "The Basics",
+            "name": "01 Ghosting the Edge",
             "order": 1,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\01-the-basics.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\01 Ghosting the Edge.md"
          }
       },
       {
-         "name": "The Characters",
-         "path": "C:\\src\\blades-in-the-dark\\html\\02-the-characters.html",
-         "order": 2,
+         "path": "02 The Usual Suspects.html",
+         "order": 1,
          "data": {
-            "title": "The Characters",
-            "order": 2,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\02-the-characters.md"
+            "name": "02 The Usual Suspects",
+            "order": 1,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\02 The Usual Suspects.md"
          }
       },
       {
-         "name": "The Crew",
-         "path": "C:\\src\\blades-in-the-dark\\html\\03-the-crew.html",
-         "order": 3,
+         "path": "03 Gearing Up.html",
+         "order": 1,
          "data": {
-            "title": "The Crew",
-            "order": 3,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\03-the-crew.md"
+            "name": "03 Gearing Up",
+            "order": 1,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\03 Gearing Up.md"
          }
       },
       {
-         "name": "The Score",
-         "path": "C:\\src\\blades-in-the-dark\\html\\04-the-score.html",
+         "path": "04 Rules to Break.html",
          "order": 4,
          "data": {
-            "title": "The Score",
+            "name": "04 Rules to Break",
             "order": 4,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\04-the-score.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\04 Rules to Break.md"
          }
       },
       {
-         "name": "Downtime",
-         "path": "C:\\src\\blades-in-the-dark\\html\\05-downtime.html",
+         "path": "05 Running the Edge.html",
+         "order": 4,
+         "data": {
+            "name": "05 Running the Edge",
+            "order": 4,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\05 Running the Edge.md"
+         }
+      },
+      {
+         "path": "06 Afterwards.html",
+         "order": 4,
+         "data": {
+            "name": "06 Afterwards",
+            "order": 4,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\06 Afterwards.md"
+         }
+      },
+      {
+         "path": "Example Page.html",
          "order": 5,
          "data": {
-            "title": "Downtime",
+            "name": "Example Page",
             "order": 5,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\05-downtime.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\Example Page.md"
          }
       },
       {
-         "path": "C:\\src\\blades-in-the-dark\\html\\README.html",
-         "order": 4,
+         "path": "readme.html",
+         "order": 6,
          "data": {
-            "name": "README",
-            "order": 4,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\README.md"
+            "name": "readme",
+            "order": 6,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\readme.md"
          }
       }
    ],
    "sections": [],
    "pages": [
       {
-         "name": "The Basics",
-         "path": "C:\\src\\blades-in-the-dark\\html\\01-the-basics.html",
+         "path": "01 Ghosting the Edge.html",
          "order": 1,
          "data": {
-            "title": "The Basics",
+            "name": "01 Ghosting the Edge",
             "order": 1,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\01-the-basics.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\01 Ghosting the Edge.md"
          }
       },
       {
-         "name": "The Characters",
-         "path": "C:\\src\\blades-in-the-dark\\html\\02-the-characters.html",
-         "order": 2,
+         "path": "02 The Usual Suspects.html",
+         "order": 1,
          "data": {
-            "title": "The Characters",
-            "order": 2,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\02-the-characters.md"
+            "name": "02 The Usual Suspects",
+            "order": 1,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\02 The Usual Suspects.md"
          }
       },
       {
-         "name": "The Crew",
-         "path": "C:\\src\\blades-in-the-dark\\html\\03-the-crew.html",
-         "order": 3,
+         "path": "03 Gearing Up.html",
+         "order": 1,
          "data": {
-            "title": "The Crew",
-            "order": 3,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\03-the-crew.md"
+            "name": "03 Gearing Up",
+            "order": 1,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\03 Gearing Up.md"
          }
       },
       {
-         "name": "The Score",
-         "path": "C:\\src\\blades-in-the-dark\\html\\04-the-score.html",
+         "path": "04 Rules to Break.html",
          "order": 4,
          "data": {
-            "title": "The Score",
+            "name": "04 Rules to Break",
             "order": 4,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\04-the-score.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\04 Rules to Break.md"
          }
       },
       {
-         "path": "C:\\src\\blades-in-the-dark\\html\\README.html",
+         "path": "05 Running the Edge.html",
          "order": 4,
          "data": {
-            "name": "README",
+            "name": "05 Running the Edge",
             "order": 4,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\README.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\05 Running the Edge.md"
          }
       },
       {
-         "name": "Downtime",
-         "path": "C:\\src\\blades-in-the-dark\\html\\05-downtime.html",
+         "path": "06 Afterwards.html",
+         "order": 4,
+         "data": {
+            "name": "06 Afterwards",
+            "order": 4,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\06 Afterwards.md"
+         }
+      },
+      {
+         "path": "Example Page.html",
          "order": 5,
          "data": {
-            "title": "Downtime",
+            "name": "Example Page",
             "order": 5,
-            "sourcePath": "C:\\src\\blades-in-the-dark\\src\\05-downtime.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\Example Page.md"
+         }
+      },
+      {
+         "path": "readme.html",
+         "order": 6,
+         "data": {
+            "name": "readme",
+            "order": 6,
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\readme.md"
          }
       }
    ]

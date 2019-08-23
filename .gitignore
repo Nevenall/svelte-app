@@ -1,9 +1,5 @@
 .DS_Store
-node_modules
-public/bundle.*
+.cache
+node_modules/
+dist/
 package-lock.json
-yarn.lock
-/src/node_modules/@sapper/
-yarn-error.log
-/cypress/screenshots/
-/__sapper__/
