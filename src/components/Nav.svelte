@@ -8,8 +8,11 @@
 
   // TODO - hover state
   // TODO - close on nav or <esc>
-  // TODO - slide in drawer
+  // DONE - slide in drawer
   // TODO - raise nav event
+  // TODO - nav drawer overlay 
+  // TODO - nav drawer transistion animation. I like the bouncy bit from that blue example. 
+
 
   // can i make the button inside the nav and relative to it
   // so its at the right side, like a tab, and when you pull it, it slides out?
@@ -97,8 +100,14 @@
     transform: translateX(50vw);
     width: 50px;
   }
+
   button.open {
-    transform: translateX(50vw);
+    /* we can either translate the button with the menu or leave it where it is. I think I 
+     like leaving it where it is. 
+     it's easier to undo
+     */
+    /* transform: translateX(50vw); */
+    transform: none;
   }
 </style>
 
@@ -109,27 +118,27 @@
       <span class="line line-3" />
     </span>
   </div> -->
-  <nav class:open>
+<nav class:open>
   <button class:open on:click={() => (open = !open)}>Open ></button>
-    <img src={logo} alt="logo" />
-    <ul>
-      {#each book.sections as section}
-        <li>
-          {section.name}
-          {#each section.pages as spage}
-            <li>
-              <a href={spage.path}>{spage.name}</a>
-            </li>
-          {/each}
-        </li>
-      {/each}
-      {#each book.pages as page}
-        <li>
-          <a href={page.path}>{page.data.name}</a>
-        </li>
-      {/each}
-    </ul>
-  </nav>
+  <img src={logo} alt="logo" />
+  <ul>
+    {#each book.sections as section}
+      <li>
+        {section.name}
+        {#each section.pages as spage}
+          <li>
+            <a href={spage.path}>{spage.name}</a>
+          </li>
+        {/each}
+      </li>
+    {/each}
+    {#each book.pages as page}
+      <li>
+        <a href={page.path}>{page.data.name}</a>
+      </li>
+    {/each}
+  </ul>
+</nav>
 <!--
    We have some nav
    need to be able to actually get a display the page content, it's a file, soo maybe take a look at how the sapper router works. We can import the pages to get them into the build. 
