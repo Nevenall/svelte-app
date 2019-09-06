@@ -3,20 +3,26 @@
   "description": "svelte and parcel from ground up",
   "version": "0.0.1",
   "scripts": {
-    "start": "parcel src/index.html -p 3000 --log-level 4",
-    "build": "parcel build --no-source-maps src/index.html"
+    "start": "parcel serve src/index.html -p 3000 --log-level verbose",
+    "build": "parcel build --no-source-maps src/index.html --log-level verbose"
   },
   "browserslist": [
     "last 1 chrome versions",
     "last 1 firefox versions",
     "not dead"
   ],
-  "main": "src/index.html",
+  "main": "dist/index.html",
   "devDependencies": {
-    "node-sass": "^4.12.0",
-    "parcel-bundler": "^1.12.3",
-    "parcel-plugin-clean-dist": "0.0.6",
-    "parcel-plugin-svelte": "^4.0.1",
-    "svelte": "^3.8.0"
+    "@smui/drawer": "^1.0.0-beta.10",
+    "@smui/icon-button": "^1.0.0-beta.10",
+    "@smui/list": "^1.0.0-beta.10",
+    "@smui/ripple": "^1.0.0-beta.10",
+    "@smui/top-app-bar": "^1.0.0-beta.10",
+    "eslint": "^6.3.0",
+    "parcel": "^2.0.0-alpha.1.1",
+    "parcel-plugin-svelte": "^4.0.3",
+    "sass": "^1.23.0-module.beta.1",
+    "svelte": "^3.9.2",
+    "to": "^0.2.9"
   }
 }
