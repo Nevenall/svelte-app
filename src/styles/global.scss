@@ -1,6 +1,9 @@
-@import './variables.scss';
-@import './remedy.scss';
-@import './typography.scss';
+@import "variables";
+@import "remedy";
+@import "../fonts/fonts";
+@import "typography";
+
+
 
 * { background-color: rgba(255,0,0,.2); }
 * * { background-color: rgba(0,255,0,.2); }
