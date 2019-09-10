@@ -92,3 +92,12 @@ want it to stick to the top and relect theme color. be nice if we can hide it as
 
 it contains the nav drawer button. maybe a breadcrumb too. especially if we get to parsing individual markdown sections.
 
+### 9/10
+
+update for bundling
+
+parcel v1 can, I think, work if we configure sass with 2 load paths: src/styles and node_modules, tth should get the components to load. 
+
+
+Someday we'll even get parcel v2 to work, but they haven't even finished the sass trafor that yet. 
+

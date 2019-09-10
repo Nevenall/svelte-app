@@ -1,7 +1,6 @@
 <script>
   import TopAppBar, { Row, Section, Title } from "@smui/top-app-bar";
   import IconButton from "@smui/icon-button";
-  
 
   export let name;
 </script>

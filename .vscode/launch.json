@@ -1,32 +1,33 @@
 {
-   // Use IntelliSense to learn about possible attributes.
-   // Hover to view descriptions of existing attributes.
-   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-   "version": "0.2.0",
-   "configurations": [
-      {
-         "type": "node",
-         "request": "launch",
-         "name": "Launch Rollup",
-         "program": "${workspaceFolder}/node_modules/rollup/bin/rollup",
-         "args": ["-c"]
-      },
-      {
-         "type": "node",
-         "request": "launch",
-         "name": "Launch via NPM",
-         "runtimeExecutable": "npm",
-         "runtimeArgs": [
-            "run-script",
-            "build"
-         ],
-         "port": 9229
-      },
-      {
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [{
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Bundling",
+      "program": "${workspaceFolder}/node_modules/parcel/lib/cli.js",
+      "cwd": "${workspaceFolder}",
+      "args": ["build", "src/index.html", "--log-level", "verbose"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch via NPM",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run-script",
+        "build"
+      ],
+      "port": 9229
+    },
+    {
       "type": "chrome",
       "request": "attach",
       "name": "Attach to Chrome",
       "port": 9222,
       "webRoot": "${workspaceFolder}/public"
-   }]
+    }
+  ]
 }
