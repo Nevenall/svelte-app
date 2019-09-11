@@ -101,3 +101,12 @@ parcel v1 can, I think, work if we configure sass with 2 load paths: src/styles 
 
 Someday we'll even get parcel v2 to work, but they haven't even finished the sass trafor that yet. 
 
+
+
+So, the include paths are not being propegated to the smui modules because of parcel utils config.js line 14. It's deliberate. 
+So, the fact that I need to reference a local file from these modules is a bit unusual. 
+So, how do we address that? Hack up my parcel module?
+
+It makes sense to me to use my global settings but allow modules to merge in local settings and overwrite globals if they have them. 
+
+Still... Could add a .sassrc file to every @smui module as well. That sounds like a pain.  
