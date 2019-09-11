@@ -32,4 +32,3 @@
     </Section>
   </Row>
 </TopAppBar>
-<h1>Hello World!</h1>

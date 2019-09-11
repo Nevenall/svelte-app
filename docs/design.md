@@ -112,3 +112,22 @@ It makes sense to me to use my global settings but allow modules to merge in loc
 Still... Could add a .sassrc file to every @smui module as well. That sounds like a pain.  
 
 
+### 9.11
+
+Development log/changes, should make a dev journal in a separate document. 
+
+I forked parcel and hacked it so it would build this proj
+
+## Bookshelf design
+
+I was thinking about a couple of things around bookshelf's design. 
+Its intended for game books, so we can have well defined game book constructs, like a stat block. 
+
+Then we can do more specific css for those constructs. 
+
+The thing about that is how much we need to embed in the md side. 
+Which is fine, we can extend things with custom containers as much as we need too. 
+
+Then each write instance has it's own stat block html container. 
+
+May want to think about that remark plugin for css classes the `.{class}` one.  

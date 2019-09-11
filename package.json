@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "parcel serve src/index.html -p 8080 --log-level 4",
-    "build": "parcel build --no-source-maps src/index.html --log-level 4"
+    "build": "parcel build --no-source-maps src/index.html --log-level 4 --detailed-report"
   },
   "browserslist": [
     "last 1 chrome versions",
