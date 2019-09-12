@@ -7,7 +7,8 @@
   import { Label, Icon } from "@smui/common";
   import A from "@smui/common/A.svelte";
 
-  let closed = true;
+  let collapsed = true;
+  let open = false;
 
   export let name;
 </script>
@@ -21,16 +22,19 @@
   @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 </style>
 
-<TopAppBar variant="short" bind:collapsed={closed}>
+<TopAppBar variant="short" bind:collapsed>
   <Row>
     <Section>
-      <IconButton class="material-icons" on:click={() => (closed = !closed)}>
+      <IconButton class="material-icons" on:click={() => (open = !open)}>
         menu
       </IconButton>
       <Title>{name}</Title>
     </Section>
     <Section align="end" toolbar>
-      {#if !closed}
+      {#if !collapsed}
+        <IconButton class="material-icons" aria-label="Toggle dark mode">
+          nights_stay
+        </IconButton>
         <IconButton href="https://github.com/Nevenall/bookshelf">
           <Icon>
             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -53,9 +57,23 @@
           </Icon>
         </IconButton>
       {/if}
-      <IconButton class="material-icons" aria-label="Toggle dark mode">
-        nights_stay
-      </IconButton>
+      {#if collapsed}
+        <IconButton
+          class="material-icons"
+          aria-label="Open app bar"
+          on:click={() => (collapsed = !collapsed)}>
+          keyboard_arrow_right
+        </IconButton>
+      {/if}
+      {#if !collapsed}
+        <IconButton
+          class="material-icons"
+          aria-label="Collapse app bar"
+          on:click={() => (collapsed = !collapsed)}>
+          keyboard_arrow_left
+        </IconButton>
+      {/if}
+
     </Section>
   </Row>
 </TopAppBar>
