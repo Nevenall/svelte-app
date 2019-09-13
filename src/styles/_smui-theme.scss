@@ -1,9 +1,9 @@
 // Theme for app shell
 
-// Svelte Colors!
-$mdc-theme-primary: #ff3e00;
-$mdc-theme-secondary: #676778;
-// Other Svelte color: #40b3ff
+//https://material.io/develop/web/docs/theming/#step-2-use-the-mdc-web-colors-in-your-own-markup
+$mdc-theme-primary: #ff6600; // 
+
+$mdc-theme-secondary: #00b3ff;
 
 $mdc-theme-background: #fff;
 $mdc-theme-surface: #fff;
