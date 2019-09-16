@@ -44,7 +44,7 @@ because of sass importing
 
 I'd like to see the svelte compiler output
 
-### 8/15
+### 8.15.2019
 
 So, parcel will package scss. I could just include it in index.html and it will get taken care of, 
 But then we miss out on tree pruning. 
@@ -56,7 +56,7 @@ So, global sass bundling works,
 but, still need to configure svelte to allow scss style sections.
 then again, do we need svelte compoents to use sass? we can proably get away with plain css. 
 
-### 8/19
+### 8.19.2019
 
 start with a nav component that does one level of section. we can improve later. 
 
@@ -92,7 +92,7 @@ want it to stick to the top and relect theme color. be nice if we can hide it as
 
 it contains the nav drawer button. maybe a breadcrumb too. especially if we get to parsing individual markdown sections.
 
-### 9/10
+### 9.10.2019
 
 update for bundling
 
@@ -112,7 +112,7 @@ It makes sense to me to use my global settings but allow modules to merge in loc
 Still... Could add a .sassrc file to every @smui module as well. That sounds like a pain.  
 
 
-### 9.11
+### 9.11.2019
 
 Development log/changes, should make a dev journal in a separate document. 
 
@@ -131,3 +131,8 @@ Which is fine, we can extend things with custom containers as much as we need to
 Then each write instance has it's own stat block html container. 
 
 May want to think about that remark plugin for css classes the `.{class}` one.  
+
+
+### 9.16.2019
+
+so, material design has some strong opinions about text colors. 

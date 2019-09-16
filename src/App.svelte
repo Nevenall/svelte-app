@@ -12,7 +12,7 @@
   import { Label, Icon } from "@smui/common";
   import A from "@smui/common/A.svelte";
 
-  let collapsed = true;
+  let collapsed = false;
   let open = false;
 
   export let name;
@@ -44,7 +44,6 @@
           <Icon>
             <svg style="width:24px;height:24px" viewBox="0 0 24 24">
               <path
-                fill="#ffffff"
                 d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205
                 11.385.6.113.82-.258.82-.577
                 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422
