@@ -1,13 +1,13 @@
 
 :root {
+   // optimize
    text-rendering: optimizeLegibility;
    font-synthesis: none;
 
    // set a base fontsize, the rest of the app uses rem.
    font-size: 12px;
-
-   // line height
-
+   
+   // base size will vary from 12 to 20 depending on the screen width.
    @media (min-width: 320px) {
       font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (1200 - 320)));
    }
@@ -16,4 +16,14 @@
       font-size: 20px;
    }
 
+}
+
+// base typography hiearchy and styles
+
+h1,h2,h3,h4,h5,h6{
+   font-family: 'Abel', sans-serif;
+}
+
+p, span, div {
+   font-family: 'Raleway', sans-serif;
 }

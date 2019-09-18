@@ -1,0 +1,54 @@
+/* global css variables, should be imported by most things */
+
+:root {
+
+   // we can nest the colors in a .darkMode class 
+   // then we can 
+
+   --primary-text-color: black;
+
+   // todo - how to figure out the various vars? 
+   // do we go with a hierarchy: prime, secondary, tertiary
+   // or do we go for semantic: body, accent, etc...
+   // primary text color
+   // accent te
+   // waht's agood way to break down a color palette?
+   // text color, accent text color
+   // background color
+   // primary color
+   // secondary color
+   // tertiary color
+
+
+}
+
+
+// Light/Dark themes
+:root {
+   /* color palette */
+   --color-dark: #3a3a3a;
+   --color-light: #eee;
+   
+   /* functional color assignments */
+   --color-text: var(--color-dark);
+   --color-background: var(--color-light);
+   
+   /* variable used to store user preference */
+   --user-color-pref: 'unset';
+ }
+ body {
+   background-color: var(--color-background);
+   color: var(--color-text);
+   /* add a transition to smooth the experience */
+   transition: background-color 0.25s ease, color 0.25s ease;
+ }
+ 
+ 
+ @media (prefers-color-scheme:dark) {
+   :root {
+     /* flip the light and dark variables */
+     
+     --color-text: var(--color-light);
+     --color-background: var(--color-dark);
+   }
+ }

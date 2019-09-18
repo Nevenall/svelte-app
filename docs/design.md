@@ -136,3 +136,10 @@ May want to think about that remark plugin for css classes the `.{class}` one.
 ### 9.16.2019
 
 so, material design has some strong opinions about text colors. 
+but we can use css custom properties to style our site. Then we can also switch light and dark themes pretty easily. 
+
+So, we could also allow for some customization of the line height and width as well. and or base font size. 
+
+## 9.18.2019
+
+dark/light theme. Easy enough to switch on the body tag...should we also change the app shell colors? I feel like probably we should adjust theme based on the them, but the thing is they are controlled through sass, but sass resolves into css props. But we'd have to dig into those variables and adjust them. 

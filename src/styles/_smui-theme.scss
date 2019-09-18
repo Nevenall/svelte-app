@@ -1,27 +1,19 @@
 // Theme for app shell
 
 // https://colors.muz.li/palette/ff6600/00b3ff/007db3/ffc300/b38900
-//https://material.io/develop/web/components/theme/
-
-// C:\src\svelte-app\node_modules\@material\theme\_variables.scss
-
-// we can use css custom props to define our actual theme. 
-// so many layers, but that's what you get. 
-// these are kinda like initial values. there's a lot we don't want to specifically override
-// because these are great for our app shell. 
-
+// https://material.io/develop/web/components/theme/
 
 $mdc-theme-primary: #ff6600;
-$mdc-theme-on-primary:red;
+// $mdc-theme-on-primary:red;
 
-$mdc-theme-secondary: #00b3ff;
-$mdc-theme-on-secondary: blue;
+$mdc-theme-secondary: #007db3;
+// $mdc-theme-on-secondary: blue;
 
-$mdc-theme-surface: #fff;
-$mdc-theme-on-surface: orange;
+$mdc-theme-surface: #00b3ff;
+// $mdc-theme-on-surface: orange;
 
 $mdc-theme-background: #fff;
-$mdc-theme-on-background: purple;
+// $mdc-theme-on-background: purple;
 
 $mdc-theme-error: red;
 

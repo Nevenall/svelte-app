@@ -14,17 +14,14 @@
 
   let collapsed = false;
   let open = false;
+   // todo - add locally stored user pref for theme if they toggle it
+   // https://codepen.io/jpamental/pen/pozrNyK
 
   export let name;
 </script>
 
 <style>
-  /* Import App Shell fonts+icons */
-  /* TODO: may want to add italics typefaces */
-  /* TODO: may also remove some of the roboto we don't need */
-  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-  @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700");
-  @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+  
 </style>
 
 <TopAppBar variant="short" bind:collapsed class="mdc-elevation--z4">
