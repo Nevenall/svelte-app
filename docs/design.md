@@ -143,3 +143,9 @@ So, we could also allow for some customization of the line height and width as w
 ## 9.18.2019
 
 dark/light theme. Easy enough to switch on the body tag...should we also change the app shell colors? I feel like probably we should adjust theme based on the them, but the thing is they are controlled through sass, but sass resolves into css props. But we'd have to dig into those variables and adjust them. 
+
+TODOs
+
+- [ ] Need to setup base typography include min content width, and minimum margins
+- [ ] need a nav drawer with list of nav.
+- [ ] need a router and page navigation. We can take this experience and feedback to book.js creation. For example, why not embed the html contents IN the book.js? make it simple enough and we have a data file that can be compressed and contains everything we need to render it.
