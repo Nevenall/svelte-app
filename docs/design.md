@@ -146,6 +146,6 @@ dark/light theme. Easy enough to switch on the body tag...should we also change 
 
 TODOs
 
-- [ ] Need to setup base typography include min content width, and minimum margins
+- [ ] Need to setup base typography include min content width, and minimum margins, and font size and styles
 - [ ] need a nav drawer with list of nav.
 - [ ] need a router and page navigation. We can take this experience and feedback to book.js creation. For example, why not embed the html contents IN the book.js? make it simple enough and we have a data file that can be compressed and contains everything we need to render it.
