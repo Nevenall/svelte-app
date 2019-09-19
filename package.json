@@ -28,6 +28,7 @@
     "svelte": "^3.12.1"
   },
   "dependencies": {
-    "@smui/button": "^1.0.0-beta.15"
+    "@smui/button": "^1.0.0-beta.15",
+    "components": "^0.1.0"
   }
 }

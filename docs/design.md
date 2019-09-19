@@ -149,3 +149,14 @@ TODOs
 - [ ] Need to setup base typography include min content width, and minimum margins, and font size and styles
 - [ ] need a nav drawer with list of nav.
 - [ ] need a router and page navigation. We can take this experience and feedback to book.js creation. For example, why not embed the html contents IN the book.js? make it simple enough and we have a data file that can be compressed and contains everything we need to render it.
+
+
+
+## 9.19.2019
+
+restructed a bit so that book specific stuff is contained in the same place. should we move color vars there?
+fonts should proably be moved to assets. 
+working on the page specific style. are imported as scss, but I think we want to use svelte to isolate the styles for the book, though I'd still like to use scss. So, setup sass in svelte and import book styles specifically 
+
+so, can we separate general typography from book specific styles? 
+book can always override. 
