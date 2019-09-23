@@ -13,7 +13,7 @@
   import A from "@smui/common/A.svelte";
   import Page from "./components/Page.svelte";
 
-  let collapsed = false;
+  let collapsed;
   let open = false;
   // todo - add locally stored user pref for theme if they toggle it
   // https://codepen.io/jpamental/pen/pozrNyK
@@ -40,7 +40,7 @@
         </IconButton>
         <IconButton href="https://github.com/Nevenall/bookshelf">
           <Icon>
-            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24">
               <path
                 d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205
                 11.385.6.113.82-.258.82-.577

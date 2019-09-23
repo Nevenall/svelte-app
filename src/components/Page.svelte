@@ -1,16 +1,22 @@
 <script>
   // import the styles for this book.
-  import bookStyle from "../styles/book.scss";
+  //import bookStyle from "/styles/book.scss";
 
   export let page;
 </script>
 
-<style>
+<style type="text/scss">
   /*TODO: setup scss in svelte */
   /*TODO: import typography.scss */
   /*TODO: import book.scss */
 
   /* NOTE: What happens when we use the :root selector in the context of a svelte component's button? */
+  :root {
+    $color: red;
+  }
+  p {
+    color: $color;
+  }
 </style>
 
 <p>
