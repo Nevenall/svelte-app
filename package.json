@@ -3,6 +3,7 @@
   "description": "svelte and parcel from ground up",
   "version": "0.0.1",
   "scripts": {
+    "dev": "parcel serve src/index.html -p 8080 --log-level verbose",
     "start": "parcel serve src/index.html -p 8080 --log-level verbose",
     "build": "parcel build --no-source-maps src/index.html --log-level verbose"
   },
@@ -18,9 +19,7 @@
     "@smui/list": "^1.0.0-beta.14",
     "@smui/ripple": "^1.0.0-beta.14",
     "@smui/top-app-bar": "^1.0.0-beta.14",
-    "eslint": "^6.3.0",
-    "parcel": "^1.12.3",
-    "parcel-plugin-svelte": "^4.0.4",
+    "parcel": "file:c:/src/parcel/packages/core/parcel-bundler",
     "sass": "^1.23.0-module.beta.1",
     "svelte": "^3.12.0"
   }
