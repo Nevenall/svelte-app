@@ -23,7 +23,7 @@
     "@smui/top-app-bar": "^1.0.0-beta.15",
     "cssnano": "^4.1.10",
     "eslint": "^6.4.0",
-    "parcel-bundler": "file:parcel",
+    "parcel-bundler": "file:c:/src/parcel/packages/core/parcel-bundler",
     "parcel-plugin-svelte": "^4.0.4",
     "sass": "^1.23.0-module.beta.1",
     "svelte": "^3.12.1",
