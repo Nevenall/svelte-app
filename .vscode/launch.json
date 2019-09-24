@@ -7,7 +7,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Bundling",
-      "program": "${workspaceFolder}/parcel/lib/cli.js",
+      "program": "C:/src/parcel/packages/core/parcel-bundler/lib/cli.js",
       "cwd": "${workspaceFolder}",
       "args": ["build", "src/index.html", "--log-level", "4"]
     },

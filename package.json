@@ -26,7 +26,6 @@
     "parcel-bundler": "file:c:/src/parcel/packages/core/parcel-bundler",
     "parcel-plugin-svelte": "^4.0.4",
     "sass": "^1.23.0-module.beta.1",
-    "svelte": "^3.12.1",
-    "svelte-preprocess-sass": "^0.2.0"
+    "svelte": "^3.12.1"
   }
 }

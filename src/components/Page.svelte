@@ -5,7 +5,7 @@
   export let page;
 </script>
 
-<style type="text/scss">
+<style lang="sass">
   /*TODO: setup scss in svelte */
   /*TODO: import typography.scss */
   /*TODO: import book.scss */
