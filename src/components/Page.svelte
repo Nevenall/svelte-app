@@ -1,15 +1,8 @@
 <script>
-  // import the styles for this book.
-  //import bookStyle from "/styles/book.scss";
-
   export let page;
 </script>
 
 <style type="text/scss">
-  /*TODO: setup scss in svelte */
-  /*TODO: import typography.scss */
-  /*TODO: import book.scss */
-
   @import "src/styles/typography.scss";
   @import "src/styles/book.scss";
 </style>
