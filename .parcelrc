@@ -5,6 +5,9 @@
   "transforms": {
     "*.svelte": [
       "parcel-transformer-svelte"
+    ],
+    "*.scss": [
+      "@parcel/transformer-sass"
     ]
   }
 }
