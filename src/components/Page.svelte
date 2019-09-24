@@ -10,12 +10,8 @@
   /*TODO: import typography.scss */
   /*TODO: import book.scss */
 
-  /* NOTE: What happens when we use the :root selector in the context of a svelte component's button? */
-  $color: red;
-  
-  p {
-    color: $color;
-  }
+  @import "src/styles/typography.scss";
+  @import "src/styles/book.scss";
 </style>
 
 <p>
