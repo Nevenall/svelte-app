@@ -13,7 +13,8 @@
   import A from "@smui/common/A.svelte";
   import Page from "./components/Page.svelte";
 
-  let collapsed;
+  let collapsed = false;
+  let isCollapsed = false;
   let open = false;
   // todo - add locally stored user pref for theme if they toggle it
   // https://codepen.io/jpamental/pen/pozrNyK
@@ -22,10 +23,16 @@
 </script>
 
 <style>
-
+  .always {
+    position: fixed;
+  }
 </style>
 
-<TopAppBar variant="short" bind:collapsed class="mdc-elevation--z4">
+<TopAppBar
+  variant="short"
+  bind:collapsed
+  bind:isCollapsed
+  class="mdc-elevation--z4">
   <Row>
     <Section>
       <IconButton class="material-icons" on:click={() => (open = !open)}>
@@ -59,7 +66,7 @@
           </Icon>
         </IconButton>
       {/if}
-      {#if collapsed}
+      <!-- {#if collapsed}
         <IconButton
           class="material-icons"
           aria-label="Open app bar"
@@ -74,11 +81,13 @@
           on:click={() => (collapsed = !collapsed)}>
           keyboard_arrow_left
         </IconButton>
-      {/if}
+      {/if} -->
 
     </Section>
   </Row>
 </TopAppBar>
 <div use:ShortFixedAdjust>
+  <div class="always">{collapsed} {isCollapsed}</div>
+
   <Page />
 </div>

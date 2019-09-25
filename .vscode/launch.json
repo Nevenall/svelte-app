@@ -3,31 +3,26 @@
   // Hover to view descriptions of existing attributes.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
-  "configurations": [{
+  "configurations": [
+    {
       "type": "node",
       "request": "launch",
       "name": "Launch Bundling",
       "program": "C:/src/parcel/packages/core/parcel-bundler/lib/cli.js",
       "cwd": "${workspaceFolder}",
-      "args": ["build", "src/index.html", "--log-level", "4"]
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch via NPM",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run-script",
-        "build"
-      ],
-      "port": 9229
+      "args": [
+        "build",
+        "src/index.html",
+        "--log-level",
+        "4"
+      ]
     },
     {
       "type": "chrome",
       "request": "attach",
       "name": "Attach to Chrome",
       "port": 9222,
-      "webRoot": "${workspaceFolder}/public"
+      "webRoot": "${workspaceFolder}/dist"
     }
   ]
 }
