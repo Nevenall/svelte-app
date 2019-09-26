@@ -1,7 +1,0 @@
-
-{
-   preprocess: {
-      style: require('svelte-preprocess-sass')({}, { type: 'text/scss' })
-    }
-}
-

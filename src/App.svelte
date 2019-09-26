@@ -22,7 +22,7 @@
 </script>
 
 <style>
-  .always {
+  .fixed {
     position: fixed;
   }
 </style>
@@ -84,7 +84,6 @@
   </Row>
 </TopAppBar>
 <div use:ShortFixedAdjust>
-  <div class="always">{collapsed}</div>
-
+  <div class="fixed">{collapsed}</div>
   <Page />
 </div>
