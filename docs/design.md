@@ -160,3 +160,25 @@ working on the page specific style. are imported as scss, but I think we want to
 
 so, can we separate general typography from book specific styles? 
 book can always override. 
+
+## 9.26.2019
+
+Got the collapsable app bar working. 
+Also deployed to https://svelte-bookshelf.netlify.com
+
+Next up, nav drawer and navigation as an entire thing. 
+
+it's time to ask, how do we want to operate the pages and nav and such?
+Like, we want the entire thing to be offline first.
+So, im inclined to drive the app from book.js. then, we can easily load html from that. 
+though, that means we'll have to adapt to deep links, which is fine. 
+
+So, arbitararly, we have html content broken into pages and sections. Sections with pages. 
+
+the problem with storing the html in json is we can't bundle any of the assets.
+So, we should keep it as html pages and assets so we can have our bundler bundle those for offline. 
+
+
+That would be the reason.
+
+
