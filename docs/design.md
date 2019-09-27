@@ -185,3 +185,19 @@ That would be the reason.
 so, we cna import the pages as html. 
 but svelte is good about protecting the content from our styles. 
 So, i think we'll have to move them to top level 
+
+## 9.27.2019
+
+cleaned up the styles so everything is in the same folder. 
+
+styles specific to the page are keyed to #page id.
+So, everything is imported globally and it works way better. 
+
+might still rearrange things as:
+
+global
+  app (appshell fonts and styles)
+  typography (base typography keyed to #page)
+  book (book specific fonts, and styles keyed to #page)
+
+can we instruct parcel to fetch and http resources and to bundle them?
