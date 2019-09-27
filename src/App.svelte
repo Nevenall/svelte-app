@@ -84,6 +84,6 @@
   </Row>
 </TopAppBar>
 <div use:ShortFixedAdjust>
-  <div class="fixed">{collapsed}</div>
-  <Page />
+  <!-- <div class="fixed">{collapsed}</div> -->
+  <Page id="page" />
 </div>

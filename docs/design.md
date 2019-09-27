@@ -182,3 +182,6 @@ So, we should keep it as html pages and assets so we can have our bundler bundle
 That would be the reason.
 
 
+so, we cna import the pages as html. 
+but svelte is good about protecting the content from our styles. 
+So, i think we'll have to move them to top level 

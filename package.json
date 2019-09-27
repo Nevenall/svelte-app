@@ -27,5 +27,9 @@
     "parcel-plugin-svelte": "^4.0.4",
     "sass": "^1.23.0-module.beta.1",
     "svelte": "^3.12.1"
+  },
+  "dependencies": {
+    "pages": "0.0.16",
+    "src": "^1.1.2"
   }
 }

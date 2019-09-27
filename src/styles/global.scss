@@ -4,6 +4,9 @@
 @import "@material/elevation/mdc-elevation";
 
 
+@import "book.scss";
+@import "typography.scss";
+
 
 span {
    color: var(--primary-text-color);
