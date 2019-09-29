@@ -1,3 +1,5 @@
+
+
 module.exports = {
    "title": "Ghosting the Edge",
    "root": "C:\\src\\ghosting-the-edge\\html",
@@ -8,6 +10,7 @@ module.exports = {
          "data": {
             "name": "01 Ghosting the Edge",
             "order": 1,
+            "content": require('./01 Ghosting the Edge.html'),
             "sourcePath": "C:\\src\\ghosting-the-edge\\src\\01 Ghosting the Edge.md"
          }
       },
