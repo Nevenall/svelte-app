@@ -1,7 +1,5 @@
 
 #page {
-
-
    // optimize
    text-rendering: optimizeLegibility;
    font-synthesis: none;
@@ -18,9 +16,6 @@
       font-size: 20px;
    }
 
-
-
-
    width: 35rem;
    max-width: calc(100% - 4vw);
    margin: 0 auto;
@@ -29,4 +24,3 @@
 
 
 // base typography hiearchy and styles
-// TODO: tie this to a 'typography' div

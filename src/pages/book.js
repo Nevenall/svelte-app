@@ -1,3 +1,5 @@
+let fs = require('fs')
+let buffer = require('buffer')
 
 
 module.exports = {
@@ -10,8 +12,8 @@ module.exports = {
          "data": {
             "name": "01 Ghosting the Edge",
             "order": 1,
-            "content": require('./01 Ghosting the Edge.html'),
-            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\01 Ghosting the Edge.md"
+            "sourcePath": "C:\\src\\ghosting-the-edge\\src\\01 Ghosting the Edge.md",
+            "content": fs.readFileSync('src/pages/01 Ghosting the Edge.html').toString()
          }
       },
       {
