@@ -1,8 +1,9 @@
-let fs = require('fs')
-let buffer = require('buffer')
+
+// import page from './01 Ghosting the Edge.html';
+import page from './README.html';
 
 
-module.exports = {
+export default {
    "title": "Ghosting the Edge",
    "root": "C:\\src\\ghosting-the-edge\\html",
    "allPages": [
@@ -13,7 +14,7 @@ module.exports = {
             "name": "01 Ghosting the Edge",
             "order": 1,
             "sourcePath": "C:\\src\\ghosting-the-edge\\src\\01 Ghosting the Edge.md",
-            "content": fs.readFileSync('src/pages/01 Ghosting the Edge.html').toString()
+            "content": page
          }
       },
       {
