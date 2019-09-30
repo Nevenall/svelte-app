@@ -201,3 +201,25 @@ global
   book (book specific fonts, and styles keyed to #page)
 
 can we instruct parcel to fetch and http resources and to bundle them?
+
+
+## 9.29.2019
+
+got the book working pretty well. we can import the files as html and have the page comp render them. 
+
+So, now the question is routing...
+there are lots of SPA options. abtract-state-routing for example, is a framework agnostic possiblity. But, we need to render a nav from the book then we need the page comp to react to nav events and load the correct page. 
+So, I feel like we might need to do some hand rolled routing if its going to be a particular comp that is doing the thing. 
+
+So, html5 history API is good for our out client side routing. Helps to keep the backbutton working well. 
+
+Next, the service-worker.js that acts as a proxy, and might interact with client side routing or might no. 
+
+Goals: 
+1. we want client side routing for pages
+1. we want to use the history api so we don't need a #
+2. we want deep linking to specific headers to work. Ie, page#header. 
+
+the service-worker only really needs to load the app in the background, though it might not even need to do that because we'll have a solid app package pre-compiled. 
+
+So, initial request. 
