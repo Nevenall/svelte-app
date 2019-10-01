@@ -223,3 +223,22 @@ Goals:
 the service-worker only really needs to load the app in the background, though it might not even need to do that because we'll have a solid app package pre-compiled. 
 
 So, initial request. 
+
+## 10.1.2019
+
+need universal redirects to index.html for deep linking. 
+that's a per host thing and pretty easy.
+we'll need to work on the actual routing. 
+either internal, or from the outside where we get a url. 
+doesn't have to be very tricky. 
+
+but does have to work client side. 
+
+there is a service worker based router. https://github.com/berstend/service-worker-router
+
+doesn't even have to be in sw context. we can use it to handle various requests. 
+And then raise an event which the page component can react to. 
+
+`var p = new UrlPattern('*(#:header)')`
+
+we can match anchors like thus. 

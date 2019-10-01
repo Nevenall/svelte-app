@@ -5,8 +5,7 @@
 // iokj
 
 
-// import page from './01 Ghosting the Edge.html';
-import readme from './README.html';
+import readme from './README';
 import _01 from './01 Ghosting the Edge';
 import _02 from './02 The Usual Suspects';
 import _03 from './03 Gearing Up';

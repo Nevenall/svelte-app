@@ -22,16 +22,11 @@
     "@smui/ripple": "^1.0.0-beta.16",
     "@smui/top-app-bar": "^1.0.0-beta.16",
     "cssnano": "^4.1.10",
-    "eslint": "^6.4.0",
+    "eslint": "^6.5.1",
     "parcel-bundler": "file:c:/src/parcel/packages/core/parcel-bundler",
     "parcel-plugin-svelte": "^4.0.4",
     "sass": "^1.23.0-module.beta.1",
     "svelte": "^3.12.1"
   },
-  "dependencies": {
-    "01": "0.0.1",
-    "f": "^1.4.0",
-    "pages": "0.0.16",
-    "src": "^1.1.2"
-  }
+  "dependencies": {}
 }
