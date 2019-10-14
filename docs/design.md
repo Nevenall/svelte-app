@@ -242,3 +242,15 @@ And then raise an event which the page component can react to.
 `var p = new UrlPattern('*(#:header)')`
 
 we can match anchors like thus. 
+
+## 10.9.2019
+
+So, we have book.js which basically forms our routes. 
+we want to click a url that represents that book/sections/pages
+and then take that route, and switch up the correct page from book for that. 
+So, router can raise an event? 
+Stand alone router will work for now, but is temporary because we'll eventually have a service worker to cache our off-line content. 
+
+So, create a highlevel router component which the app can use and will propegate route info through our svelte components. 
+
+The 

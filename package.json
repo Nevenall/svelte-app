@@ -25,8 +25,10 @@
     "eslint": "^6.5.1",
     "parcel-bundler": "file:c:/src/parcel/packages/core/parcel-bundler",
     "parcel-plugin-svelte": "^4.0.4",
-    "sass": "^1.23.0-module.beta.1",
+    "sass": "^1.23.0",
     "svelte": "^3.12.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "service-worker-router": "^1.7.2"
+  }
 }
