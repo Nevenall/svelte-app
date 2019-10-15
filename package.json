@@ -29,6 +29,8 @@
     "svelte": "^3.12.1"
   },
   "dependencies": {
+    "http2": "^3.3.7",
+    "re": "^0.1.4",
     "service-worker-router": "^1.7.2"
   }
 }
