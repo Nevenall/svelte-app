@@ -268,3 +268,10 @@ Easy to import book into the service worker. which is really cool. We can make t
 - page comp Need to scroll to headers
 
 Most of our components can be immutable. We don't get data changes. That's kinda cool.  
+
+Also, forward and back history. 
+
+need to handle 404s
+
+service worker needs to do something when there's a page match. Ie return some kind of request.
+I guess it's working now, but...
