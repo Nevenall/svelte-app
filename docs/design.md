@@ -253,4 +253,6 @@ Stand alone router will work for now, but is temporary because we'll eventually 
 
 So, create a highlevel router component which the app can use and will propegate route info through our svelte components. 
 
-The 
+## 10.17.2019
+
+got the service-worker messaging working, least on chrome. So,  
