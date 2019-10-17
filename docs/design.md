@@ -255,4 +255,16 @@ So, create a highlevel router component which the app can use and will propegate
 
 ## 10.17.2019
 
-got the service-worker messaging working, least on chrome. So,  
+got the service-worker messaging working, least on chrome. So, now we check for when the url request is a page, and we can get/cache those pages, or, we could use inline content.
+We can't do the inline content because of assets on those pages. We need to be able to bundle those. but we can cache the pages when the app starts.
+
+Easy to import book into the service worker. which is really cool. We can make the book module fit our design. 
+
+- Need nav based on the book sections and pages. also, with <svelte:self> we can create a recursive nav
+- need slugs for each page.  
+
+- need to connect the page to the service worker messages. The page comp could subscribe to messages itself, but there must be a better way. I think svelte has a message pump. Or we can create a router component. 
+
+- page comp Need to scroll to headers
+
+Most of our components can be immutable. We don't get data changes. That's kinda cool.  

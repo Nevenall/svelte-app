@@ -1,5 +1,7 @@
 import UrlPattern from 'url-pattern'
 
+import book from '/pages/book'
+
 // todo - becomes a match for each of the pages in book, based on the slug of the page.
 const pattern = new UrlPattern('/page')
 
@@ -26,6 +28,9 @@ self.addEventListener('fetch', async event => {
 self.addEventListener('install', async event => {
    // Perform install steps
    console.log("[ServiceWorker]", event)
+
+   // cache book pages
+   book.allPages.forEach(el => console.log(el))
 
    // activate immediately
    self.skipWaiting()

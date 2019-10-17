@@ -2,21 +2,31 @@
 // we'll have to assume there is some kind of loader capable of loading html content. 
 
 // we'll import each page, it will need some kind of unique identifier, like its index in the allpages array
-// iokj
+// all pages should proably be a function that iterates the tree, to avoid duplicating the page data.
 
 
-import readme from './README';
-import _01 from './01 Ghosting the Edge';
-import _02 from './02 The Usual Suspects';
-import _03 from './03 Gearing Up';
-import _04 from './04 Rules to Break';
-import _05 from './05 Running the Edge';
-import _06 from './06 Afterwards';
+import readme from './README'
+import _01 from './01 Ghosting the Edge'
+import _02 from './02 The Usual Suspects'
+import _03 from './03 Gearing Up'
+import _04 from './04 Rules to Break'
+import _05 from './05 Running the Edge'
+import _06 from './06 Afterwards'
+
+// we can have a private data version
+// and export various bits.
+// don't need to get too complicated
+// all we need is a format for data we can use
+// we need file names and slugs
+//  
+
 
 
 export default {
+
    "title": "Ghosting the Edge",
    "root": "C:\\src\\ghosting-the-edge\\html",
+
    "readme": {
       "path": "readme.html",
       "order": 6,
