@@ -29,8 +29,6 @@
     "svelte": "^3.12.1"
   },
   "dependencies": {
-    "http2": "^3.3.7",
-    "re": "^0.1.4",
     "url-pattern": "^1.0.3"
   }
 }
