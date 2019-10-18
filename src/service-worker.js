@@ -30,7 +30,6 @@ self.addEventListener('install', async event => {
    console.log("[ServiceWorker]", event)
 
    // cache book pages
-   book.allPages.forEach(el => console.log(el))
 
    // activate immediately
    self.skipWaiting()
