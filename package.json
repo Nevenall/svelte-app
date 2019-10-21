@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "rimraf dist && parcel serve src/index.html -p 8080 --log-level 4",
     "start": "parcel serve src/index.html -p 8080 --log-level 4",
-    "build": "rimraf dist && parcel build --no-source-maps src/index.html --detailed-report"
+    "build": "parcel build src/index.html --no-source-maps  --detailed-report"
   },
   "browserslist": [
     "last 1 chrome versions",
