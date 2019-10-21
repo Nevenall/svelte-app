@@ -8,7 +8,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Bundling",
-      "program": "C:/src/parcel/packages/core/parcel-bundler/lib/cli.js",
+      "program": "C:/src/svelte-app/node_modules/parcel/lib/cli.js",
       "cwd": "${workspaceFolder}",
       "args": [
         "build",

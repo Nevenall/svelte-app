@@ -7,8 +7,12 @@
     "start": "parcel serve src/index.html -p 8080 --log-level 4",
     "build": "del dist\\* /Q && parcel build --no-source-maps src/index.html --log-level 4 --detailed-report"
   },
-  "browser": "dist/index.html",
-  
+  "main": "dist/index.html",
+  "targets": {
+    "main": {
+      "browsers": ["last 2 version"]
+    }
+  },
   "devDependencies": {
     "@smui/button": "^1.0.0-beta.16",
     "@smui/common": "^1.0.0-beta.15",

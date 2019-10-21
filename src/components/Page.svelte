@@ -1,5 +1,5 @@
 <script>
-  import book from "/pages/book.js";
+//    import book from "/pages/book.js";
 
   export let id;
 </script>
