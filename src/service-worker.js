@@ -1,5 +1,7 @@
 import UrlPattern from 'url-pattern'
-import book from '/pages/book'
+
+// Currently this import really confuses parcel, not mention runtime action jeez
+// import book from '/pages/book'
 
 // todo - becomes a match for each of the pages in book, based on the slug of the page.
 
