@@ -5,13 +5,13 @@
 // all pages should proably be a function that iterates the tree, to avoid duplicating the page data.
 
 
-import readme from './README'
-import _01 from './01 Ghosting the Edge'
-import _02 from './02 The Usual Suspects'
-import _03 from './03 Gearing Up'
-import _04 from './04 Rules to Break'
-import _05 from './05 Running the Edge'
-import _06 from './06 Afterwards'
+import readme from './README.html'
+import _01 from './01 Ghosting the Edge.html'
+import _02 from './02 The Usual Suspects.html'
+import _03 from './03 Gearing Up.html'
+import _04 from './04 Rules to Break.html'
+import _05 from './05 Running the Edge.html'
+import _06 from './06 Afterwards.html'
 
 // we can have a private data version
 // and export various bits.
