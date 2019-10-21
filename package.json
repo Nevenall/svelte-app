@@ -3,9 +3,9 @@
   "description": "svelte and parcel from ground up",
   "version": "0.0.1",
   "scripts": {
-    "dev": "del dist\\* /Q && parcel serve src/index.html -p 8080 --log-level 4",
+    "dev": "rimraf dist && parcel serve src/index.html -p 8080 --log-level 4",
     "start": "parcel serve src/index.html -p 8080 --log-level 4",
-    "build": "parcel build --no-source-maps src/index.html --log-level 4 --detailed-report"
+    "build": "rimraf dist && parcel build --no-source-maps src/index.html --detailed-report -t noderm"
   },
   "browserslist": [
     "last 1 chrome versions",
@@ -14,6 +14,7 @@
   ],
   "main": "dist/index.html",
   "devDependencies": {
+    "@babel/core": "^7.6.4",
     "@smui/button": "^1.0.0-beta.16",
     "@smui/common": "^1.0.0-beta.15",
     "@smui/drawer": "^1.0.0-beta.16",
@@ -23,8 +24,9 @@
     "@smui/top-app-bar": "^1.0.0-beta.16",
     "cssnano": "^4.1.10",
     "eslint": "^6.5.1",
-    "parcel": "file:parcel",
+    "parcel-bundler": "file:parcel",
     "parcel-plugin-svelte": "^4.0.4",
+    "rimraf": "^3.0.0",
     "sass": "^1.23.0",
     "svelte": "^3.12.1"
   },
