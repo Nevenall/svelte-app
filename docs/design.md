@@ -275,3 +275,10 @@ need to handle 404s
 
 service worker needs to do something when there's a page match. Ie return some kind of request.
 I guess it's working now, but...
+
+
+## 10.22.2019
+
+## 10.25.2019
+
+so, we can have one route per page, but every route goes to the main app comp, or page, and page can use the route props to figure out which page to load. 
