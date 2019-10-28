@@ -3,9 +3,10 @@
   "description": "svelte and parcel from ground up",
   "version": "0.0.1",
   "scripts": {
-    "dev": "rimraf dist && parcel serve src/index.html -p 8080 --log-level 4",
-    "start": "parcel serve src/index.html -p 8080 --log-level 4",
-    "build": "parcel build src/index.html --no-source-maps  --detailed-report"
+    "clean": "rimraf dist",
+    "dev": "npm run clean && parcel serve src/index.html -p 8080 --log-level 4",
+    "start": "npm run clean && parcel serve src/index.html -p 8080 --log-level 4",
+    "build": "npm run clean && parcel build src/index.html --no-source-maps  --detailed-report"
   },
   "browserslist": [
     "last 1 chrome versions",
@@ -23,14 +24,16 @@
     "@smui/ripple": "^1.0.0-beta.16",
     "@smui/top-app-bar": "^1.0.0-beta.16",
     "cssnano": "^4.1.10",
-    "eslint": "^6.5.1",
+    "eslint": "^6.6.0",
     "parcel-bundler": "file:parcel",
     "parcel-plugin-svelte": "^4.0.4",
     "rimraf": "^3.0.0",
-    "sass": "^1.23.0",
+    "sass": "^1.23.1",
     "svelte": "^3.12.1"
   },
   "dependencies": {
-    "url-pattern": "^1.0.3"
+    "svero": "^1.0.0",
+    "url-pattern": "^1.0.3",
+    "svelte": "^3.12.1"
   }
 }

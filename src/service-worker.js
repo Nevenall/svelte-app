@@ -1,68 +1,49 @@
-import UrlPattern from 'url-pattern'
 
-// Currently this import really confuses parcel, not mention runtime action jeez
-// import book from '/pages/book'
+// Currently this import really confuses parcel, not to mention runtime action jeez
+//import book from '/pages/book'
 
 // todo - becomes a match for each of the pages in book, based on the slug of the page.
 
 // Set up service worker event listener
 self.addEventListener('fetch', event => {
-   event.waitUntil(async () => {
-      const pattern = new UrlPattern('/page')
-      let path = new URL(event.request.url).pathname
-      let match = pattern.match(path)
-      // console.log("[ServiceWorker] url", event.request.url)
-      // console.log("[ServiceWorker] match", match)
-      // console.log("[ServiceWorker] clientId", event.clientId)
+   // let match = path === '/page'
 
-      if (event.clientId && match) {
-         const client = await self.clients.get(event.clientId)
+   // console.log(`[ServiceWorker] '${path}' '${match}' | client '${event.clientId}'`)
+   // // console.log("[ServiceWorker] url", event.request.url)
+   // console.log("[ServiceWorker] match", match)
+   // console.log("[ServiceWorker] clientId", event.clientId)
 
+   if (event.clientId) {
+      self.clients.get(event.clientId).then(client => {
+         // console.log("[ServiceWorker] Sending message to client ", client)
          client.postMessage({
             msg: "message posted from fetch listener",
             url: event.request.url
          })
-      }
+      })
+   }
 
-   })
 
 })
 
 
 self.addEventListener('install', event => {
-   // Perform install steps
-   event.waitUntil(async () => {
-      // activate immediately
-      self.skipWaiting()
+   console.log(event)
 
-      console.log(event)
-      // caching etc
+   // activate immediately
+   event.waitUntil(self.skipWaiting())
 
-
-
-   })
 })
 
 self.addEventListener('activate', event => {
+   console.log(event)
 
-   // Perform activate steps
+   // grab all clients
+   event.waitUntil(self.clients.claim())
+})
+
+self.addEventListener('message', event => {
    event.waitUntil(async () => {
-      // grab all clients
-      self.clients.claim()
-
-      console.log(event)
-      // caching etc
+      return
    })
-
-   // self.clients.matchAll({
-   //    includeUncontrolled: true
-   //  }).then(function(clientList) {
-   //    var urls = clientList.map(function(client) {
-   //      return client.url
-   //    })
-   //    console.log('[ServiceWorker] Matching clients:', urls.join(', '))
-   //  })
-
-
-
 })
