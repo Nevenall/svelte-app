@@ -282,3 +282,57 @@ I guess it's working now, but...
 ## 10.25.2019
 
 so, we can have one route per page, but every route goes to the main app comp, or page, and page can use the route props to figure out which page to load. 
+
+## 10.28.2019
+
+Not sure if the parcel svelte plugin is responsible for the issues with svero router or not. but...I'm kinda done with the not quite working bundlers. This site is simple enough that bundling is almost silly--therefore, I'm going to implement the build system is Gulp. 
+
+### Gulp Build System
+
+dev task will build, bundle, and watch files. Serve with browser-sync
+
+build task will build, bundle, and minify a SPA package. 
+
+Asset types:
+Styles: Sass/CSS, which starts as sass both global and in svelte components. 
+Svelte components: Compile with Svelte. Sass is also integrated here because comps have their own styles.
+Static Assets: fonts, images, etc...
+HTML: These files are kinda static, not sure the best way to import their contents. Plus the entry point index.html.
+  https://github.com/Liquid-JS/gulp-js-text-imports
+Service Worker: There is a service worker that will preload the apps assets so it can operate offline first. 
+
+That is the entire site. 
+
+Packages and such...
+We want Babel to transpile our js so we can write modern js
+We want Sass to compile our styles to css
+  We want postCSS to run autoprefixer for our styles, so we can write modern css. 
+We use Svelte to compile components. 
+We use browser-sync for dev time hotreloading
+We use serve for production serving our spa. 
+
+We use gulp to manage the whole front end nonsense. 
+
+#### File Hash
+
+Shall we hash the files as we bundle them? maybe with a timestamp? It's a thing that some people recommend for service-workers anyway. But...this is a simple app so it might be unnecessassary. Though, we could maybe use the git commit as a file hash. That would be interesting, though we'd also have to rewrite all the references. 
+
+#### File Conflicts
+
+we can bundle the prod distribution as a single flat directly. But... then file conflicts. 
+Or, we can mimic the layout of the src directory in the distribution. Which means no conflicts, and no need to rewrite the refs. Though, for things like 
+
+#### Dependency Tree
+
+By default Gulp works on file globs
+I'd like a simple gulp module that streams dependencies from a specific file. Like a bundler. 
+Maybe one could steal such a thing from Parcel or find on npm. Though it's a pretty complex tree of dependencies. Then you can just copy files, right?
+
+
+### Parcel v2
+
+I wonder if Parcel v2 will work better? 
+
+
+
+
