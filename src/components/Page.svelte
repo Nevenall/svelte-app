@@ -18,9 +18,7 @@
 </script>
 
 <div {id}>
-  <h1>{router.path}</h1>
 
   {@html book.readme.content}
-  <!-- {@html book.allPages[0].content} -->
 
 </div>

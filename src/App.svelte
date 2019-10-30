@@ -11,11 +11,8 @@
   import List, { Item, Text } from "@smui/list";
   import { Label, Icon } from "@smui/common";
   import A from "@smui/common/A.svelte";
-  import Page from "./components/Page.svelte";
 
-  import { Router, Route } from "svero";
-
-  import { writable } from "svelte/store";
+  import { Router, Route } from "./components/svero/main.js";
 
   let collapsed = false;
   let open = false;
@@ -33,7 +30,7 @@
 
 <svelte:window on:scroll={() => (collapsed = window.scrollY > 5)} />
 
-<!-- <TopAppBar variant="short" bind:collapsed class="mdc-elevation--z4">
+<TopAppBar variant="short" bind:collapsed class="mdc-elevation--z4">
   <Row>
     <Section>
       <IconButton class="material-icons" on:click={() => (open = !open)}>
@@ -86,17 +83,18 @@
 
     </Section>
   </Row>
-</TopAppBar> -->
+</TopAppBar>
 
 <div use:ShortFixedAdjust>
-  <!-- <div class="fixed">{collapsed}</div> -->
-
   <Router>
-    <Route fallback path="*">
-      <h1>fallback!</h1>
+    <Route exact path="/">
+      <h2>index route</h2>
     </Route>
-    <Route path="/01">
-      <h1>page one!</h1>
+    <Route>
+    <h2>page 1 route</h2>
+    </Route>
+    <Route fallback path="*">
+    <h2>404 path</h2>
     </Route>
   </Router>
 </div>

@@ -1,5 +1,4 @@
 const sass = require('sass');
-const svelte = require('svelte/compiler');
 const { dirname } = require('path');
 
 module.exports = {
