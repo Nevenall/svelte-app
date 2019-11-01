@@ -90,11 +90,11 @@
     <Route exact path="/">
       <h2>index route</h2>
     </Route>
-    <Route>
-    <h2>page 1 route</h2>
+    <Route path="/01">
+      <h2>page 1 route</h2>
     </Route>
     <Route fallback path="*">
-    <h2>404 path</h2>
+      <h2>404 path</h2>
     </Route>
   </Router>
 </div>
