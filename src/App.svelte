@@ -13,9 +13,8 @@
   import A from "@smui/common/A.svelte";
   import Page from "./components/Page.svelte";
 
-  import { Router, Route } from "svero";
+  import { Router, Route } from "svero/main.js";
 
-  import { writable } from "svelte/store";
 
   let collapsed = false;
   let open = false;
@@ -33,7 +32,7 @@
 
 <svelte:window on:scroll={() => (collapsed = window.scrollY > 5)} />
 
-<!-- <TopAppBar variant="short" bind:collapsed class="mdc-elevation--z4">
+<TopAppBar variant="short" bind:collapsed class="mdc-elevation--z4">
   <Row>
     <Section>
       <IconButton class="material-icons" on:click={() => (open = !open)}>
@@ -86,7 +85,7 @@
 
     </Section>
   </Row>
-</TopAppBar> -->
+</TopAppBar>
 
 <div use:ShortFixedAdjust>
   <!-- <div class="fixed">{collapsed}</div> -->
