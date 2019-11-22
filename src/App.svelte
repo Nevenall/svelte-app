@@ -1,7 +1,4 @@
 <script>
-  
-
-
   let collapsed = false;
   let open = false;
   // todo - add locally stored user pref for theme if they toggle it
@@ -10,9 +7,14 @@
   export let name;
 </script>
 
-<style>
+<style type="text/scss">
+
+  $color: black;
   .fixed {
     position: fixed;
+  }
+  h1 {
+     color: $color;
   }
 </style>
 
@@ -73,9 +75,9 @@
   </Row>
 </TopAppBar> -->
 
-<div >
+<div>
 
-<h1>Just a simple page</h1>
+  <h1>Just a simple page</h1>
   <!-- <Router>
     <Route exact path="/">
       <h2>index route</h2>

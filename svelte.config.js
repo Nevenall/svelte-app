@@ -2,7 +2,7 @@ const sass = require('sass');
 const { dirname } = require('path');
 
 module.exports = {
-   preprocess: {
+   preprocessors: {
       style: async ({ content, attributes, filename }) => {
          // only process <style lang="sass">
          if (attributes.type !== 'text/scss') return;
