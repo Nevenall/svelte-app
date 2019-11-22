@@ -1,18 +1,6 @@
 <script>
-  import TopAppBar, {
-    Row,
-    Section,
-    Title,
-    ShortFixedAdjust
-  } from "@smui/top-app-bar";
-  import Drawer, { Content, Scrim, AppContent } from "@smui/drawer";
-  import Button from "@smui/button";
-  import IconButton from "@smui/icon-button";
-  import List, { Item, Text } from "@smui/list";
-  import { Label, Icon } from "@smui/common";
-  import A from "@smui/common/A.svelte";
+  
 
-  import { Router, Route } from "./components/svero/main.js";
 
   let collapsed = false;
   let open = false;
@@ -29,7 +17,7 @@
 </style>
 
 <svelte:window on:scroll={() => (collapsed = window.scrollY > 5)} />
-
+<!-- 
 <TopAppBar variant="short" bind:collapsed class="mdc-elevation--z4">
   <Row>
     <Section>
@@ -83,10 +71,12 @@
 
     </Section>
   </Row>
-</TopAppBar>
+</TopAppBar> -->
 
-<div use:ShortFixedAdjust>
-  <Router>
+<div >
+
+<h1>Just a simple page</h1>
+  <!-- <Router>
     <Route exact path="/">
       <h2>index route</h2>
     </Route>
@@ -96,5 +86,5 @@
     <Route fallback path="*">
       <h2>404 path</h2>
     </Route>
-  </Router>
+  </Router> -->
 </div>
